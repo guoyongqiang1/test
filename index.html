@@ -158,6 +158,216 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guoyongqiang.cn/2020/11/07/java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="郭永强">
+      <meta itemprop="description" content="郭永强的个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭永强">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/07/java/" class="post-title-link" itemprop="url">java</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-07 20:05:57 / 修改时间：20:07:45" itemprop="dateCreated datePublished" datetime="2020-11-07T20:05:57+08:00">2020-11-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a target="_blank" rel="noopener" href="https://ham.youkeda.com/articles/detail/5f3757005e205f30b2c2b140">增强for循环</a></p>
+<p>调用字符串对象方法：</p>
+<blockquote>
+<p>字符串长度<code>length</code><br>取出字符串中的一个字<code>charAt</code><br>去掉左右多余的空格<code>trim</code><br>查找字符串<code>indexOf</code><br>       <code> indexOf(&quot;字符串&quot;,&quot;开始索引值&quot;)</code>,第二个参数是一个数字类型，用于设定从什么位置开始查找。所以我们找到第一个匹配到的索引+匹配字符串长度就是开始值了，这个时候查找到的就是第二个匹配内容了<br>       <code> str.indexOf(&quot;Java&quot;, index + 4)</code><br>字符串拼接<code>substring</code><br>字符串开始和结束内容判断<code>startsWith/endsWith</code><br>字符串替换<code>replaceAll</code><br>字符串分割<code>split</code><br>大小写转化<code>toUpperCase/toLowerCase</code><br>字符串比较<code>equals</code><br>数字和字符串转化<code>Integer.parseInt</code><br><code>使用valueOf强制把数字转化为字符串</code></p>
+</blockquote>
+<p>字符串转化为日期时间：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把字符串转化位 LocalDate 对象，并得到字符串匹配的日期</span></span><br><span class="line">LocalDate date2 = LocalDate.parse(<span class="string">&quot;2019-01-01&quot;</span>);</span><br><span class="line">    如果日期字符串的格式不是yyyy-MM-dd,那就要借助DateTimeFormatter</span><br><span class="line">    DateTimeFormatter df = DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy/MM/dd&quot;</span>);</span><br><span class="line">    <span class="comment">// 把字符串转化位 LocalDate 对象，并得到字符串匹配的日期</span></span><br><span class="line">    LocalDate date2 = LocalDate.parse(<span class="string">&quot;2019/01/01&quot;</span>,df);</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<p>LocalDate类方法：<br>               <code> plusDays（天数）</code><br>              <code>  isBefore</code><br>               <code> isAfter</code></p>
+<p>File 对象的其他方法</p>
+<ol>
+<li>   <code>public String getName()</code><br>返回由此抽象路径名表示的文件或目录的名称。</li>
+<li><code>public String getParent()</code><br>返回此抽象路径名的父路径名的路径名字符串，如果此路径名没有指定父目录，则返回 null。</li>
+<li>   <code>public File getParentFile()</code><br>返回此抽象路径名的父路径名的抽象路径名，如果此路径名没有指定父目录，则返回 null。</li>
+<li>   <code>public String getPath()</code><br>将此抽象路径名转换为一个路径名字符串。</li>
+<li> <code>  public boolean isAbsolute()</code><br>测试此抽象路径名是否为绝对路径名。</li>
+<li>  <code> public String getAbsolutePath()</code><br>返回抽象路径名的绝对路径名字符串。</li>
+<li>   <code>public boolean canRead()</code><br>测试应用程序是否可以读取此抽象路径名表示的文件。</li>
+<li> <code>  public boolean canWrite()</code><br>测试应用程序是否可以修改此抽象路径名表示的文件。</li>
+<li> <code>  public boolean exists()</code><br>测试此抽象路径名表示的文件或目录是否存在。</li>
+<li>  <code> public boolean isDirectory()</code><br>测试此抽象路径名表示的文件是否是一个目录。</li>
+<li>   <code>public boolean isFile()</code><br>测试此抽象路径名表示的文件是否是一个标准文件。</li>
+<li>   <code>public long lastModified()</code><br>返回此抽象路径名表示的文件最后一次被修改的时间。</li>
+<li>  <code> public long length()</code><br>返回由此抽象路径名表示的文件的长度。</li>
+<li>  <code> public boolean createNewFile() throws IOException</code><br>当且仅当不存在具有此抽象路径名指定的名称的文件时，原子地创建由此抽象路径名指定的一个新的空文件。</li>
+<li><code> public boolean delete()</code><br>删除此抽象路径名表示的文件或目录。</li>
+<li>  <code> public void deleteOnExit()</code><br>在虚拟机终止时，请求删除此抽象路径名表示的文件或目录。</li>
+<li>  <code> public String[] list()</code><br>返回由此抽象路径名所表示的目录中的文件和目录的名称所组成字符串数组。</li>
+<li>   <code>public String[] list(FilenameFilter filter)</code><br>返回由包含在目录中的文件和目录的名称所组成的字符串数组，这一目录是通过满足指定过滤器的抽象路径名来表示的。</li>
+<li><code> public File[] listFiles()</code><br>返回一个抽象路径名数组，这些路径名表示此抽象路径名所表示目录中的文件。</li>
+<li> <code>  public File[] listFiles(FileFilter filter)</code><br>返回表示此抽象路径名所表示目录中的文件和目录的抽象路径名数组，这些路径名满足特定过滤器。</li>
+<li>   <code>public boolean mkdir()</code><br>创建此抽象路径名指定的目录。</li>
+<li>  <code> public boolean mkdirs()</code><br>创建此抽象路径名指定的目录，包括创建必需但不存在的父目录。</li>
+<li><code> public boolean renameTo(File dest)</code><br>重新命名此抽象路径名表示的文件。</li>
+<li>   <code>public boolean setLastModified(long time)</code><br>设置由此抽象路径名所指定的文件或目录的最后一次修改时间。</li>
+<li>  <code> public boolean setReadOnly()</code><br>标记此抽象路径名指定的文件或目录，以便只可对其进行读操作。</li>
+<li>  <code> public static File createTempFile(String prefix, String suffix, File directory) throws IOException</code><br>在指定目录中创建一个新的空文件，使用给定的前缀和后缀字符串生成其名称。</li>
+<li>  <code> public static File createTempFile(String prefix, String suffix) throws IOException</code><br>在默认临时文件目录中创建一个空文件，使用给定前缀和后缀生成其名称。</li>
+<li>  <code> public int compareTo(File pathname)</code><br>按字母顺序比较两个抽象路径名。</li>
+<li>  <code> public int compareTo(Object o)</code><br>按字母顺序比较抽象路径名与给定对象。</li>
+<li>  <code> public boolean equals(Object obj)</code><br>测试此抽象路径名与给定对象是否相等。</li>
+<li><code>public String toString()</code><br>返回此抽象路径名的路径名字符串。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://guoyongqiang.cn/2020/11/07/Git%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="郭永强">
+      <meta itemprop="description" content="郭永强的个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭永强">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/07/Git%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-07 20:05:40 / 修改时间：20:07:37" itemprop="dateCreated datePublished" datetime="2020-11-07T20:05:40+08:00">2020-11-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/619122f8747b">浅析 Git 思想和工作原理</a></p>
+</blockquote>
+<ol>
+<li>查看是否生成ssh <code>cat ~/.ssh/id_rsa.pub</code></li>
+<li>生成本地ssh <code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</code></li>
+<li>配置全局变量 <code>git config --global user.name &quot;yebing&quot;</code><pre><code>     `git config --global user.email &quot;hhdd576@126.com&quot;`</code></pre>
+</li>
+<li>git clone 仓库地址 <code>git clone 仓库地址</code></li>
+</ol>
+<p><strong>提交</strong><br>5. <code>git add -A</code> （-A all）<br>6. <code>git commit -m &quot;本次提交的修改的备注&quot;</code></p>
+<blockquote>
+<p>新创建的文件必须要按照顺序进行提交，如果只是修改文件，并没有创建文件，也可以使用git commit -am<br>“本次提交的修改的备注”来合并前面两个步骤。</p>
+</blockquote>
+<ol start="7">
+<li><code>git push origin main</code></li>
+<li><code>git push</code></li>
+<li><code>git push origin b</code></li>
+<li>抓取远程仓库的内容 <code>git pull</code></li>
+</ol>
+<p>初始化为git仓库 <code>git init</code></p>
+<p>绑定远程仓库 </p>
+<blockquote>
+<p><code>git remote -v</code>命令来查看当前git仓库绑定的远程仓库，刚刚初始化的仓库一般来说是没有绑定远程仓库的，而从线上clone下来的仓库是必然有远程绑定的。<br><code>git remote -v</code> 显示空白，即无绑定，才可以进行远程仓库的绑定，否则提示冲突<br><code>git remote add origin</code> 仓库地址</p>
+</blockquote>
+<p>分支</p>
+<blockquote>
+<p>创建新的分支 <code>git branch v1</code><br>切换分支 <code>git checkout v1</code><br>        这两条命令合用 <code>git checkout -b dev</code></p>
+</blockquote>
+<p>Linux命令：</p>
+<blockquote>
+<p>谨记：Linux命令和所在的路径相关，一定要时刻注意自己是否在所在在正确的路径</p>
+</blockquote>
+<ol>
+<li>查看当前目录下的文件 <code>ls</code></li>
+<li>查看当前目录下的文件，包括隐藏文件 <code>ls -a</code></li>
+<li>在当前目录下创建文件 <code>touch 文件</code></li>
+<li>在当前目录下创建文件夹 <code>mkdir 文件夹</code></li>
+<li>进入某个文件夹：<code> cd 文件目录</code>(如果直接cd，则会返回根目录，在window电脑下会回到当前所在的盘符)</li>
+<li>删除当前目录下的指定文件(慎用) <code>rm -rf 文件</code></li>
+</ol>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo博客文档</a></p>
+<p><code>hexo init blog</code><br><code>npm install hexo-deployer-git --save</code>（命令需要在博客文件夹内安装，如果创建了新的博客文件夹需要重新安装）<br>修改配置文件 _config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="attr">theme:</span> <span class="string">landscape</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">你的GitHub仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意  地址也使用git开头的SSH地址，仓库名要符合github用户名+github.io的规则<br>注意    theme:后面有一个空格，同样的type:后面也有，这是yml格式文件的特点之一<br>注意    type:是由缩进的，t和上面deploy的p对齐</p>
+</blockquote>
+<p>提交<br><code>hexo clean</code> 清除缓存<br><code>hexo generate</code> 生成新的静态文件，可简写为hexo g<br><code>hexo deploy</code> 把生成的文件部署到博客上可简写为hexo d</p>
+<p>发布新博客 <code>hexo new 博客名</code> </p>
+<p>更换主题<br>下载主题文件 <code>git clone https://github.com/theme-next/hexo-theme-next</code></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39477597/article/details/87784418">npm的安装</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/469e985288b3">GITHUB+HEXO博客轻松更换主题外观</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://guoyongqiang.cn/2020/11/07/Hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -348,7 +558,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
