@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://guoyongqiang.cn/about/index.html</loc>
+    
+    <lastmod>2020-12-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://guoyongqiang.cn/2020/11/09/%E6%9C%9F%E4%B8%AD%E8%80%83%E8%AF%95%E7%AE%80%E7%AD%94%E9%A2%98/</loc>
     
     <lastmod>2020-12-07</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://guoyongqiang.cn/404.html</loc>
     
     <lastmod>2020-11-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://guoyongqiang.cn/about/index.html</loc>
-    
-    <lastmod>2020-11-07</lastmod>
     
   </url>
   
