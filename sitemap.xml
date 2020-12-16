@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://guoyongqiang.cn/404.html</loc>
+    
+    <lastmod>2020-12-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://guoyongqiang.cn/about/index.html</loc>
     
     <lastmod>2020-12-14</lastmod>
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://guoyongqiang.cn/404.html</loc>
-    
-    <lastmod>2020-11-09</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://guoyongqiang.cn/categories/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
@@ -102,7 +102,7 @@
 
   <url>
     <loc>https://guoyongqiang.cn/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -112,49 +112,49 @@
   
   <url>
     <loc>https://guoyongqiang.cn/categories/%E5%8A%9B%E6%89%A3%EF%BC%8C%E9%A2%98%E8%A7%A3/</loc>
-    <lastmod>2020-12-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://guoyongqiang.cn/categories/Git/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://guoyongqiang.cn/categories/Hexo/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://guoyongqiang.cn/categories/Test/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <loc>https://guoyongqiang.cn/categories/Git/</loc>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://guoyongqiang.cn/categories/Java/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://guoyongqiang.cn/categories/Test/</loc>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://guoyongqiang.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://guoyongqiang.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2020-12-14</lastmod>
+    <lastmod>2020-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
